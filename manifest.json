@@ -1,0 +1,17 @@
+{
+	"name": "Cookie Cutter",
+	"version": "1.1",
+	"description": "Keeps cookies clear for multiple searches in TAG.",
+	"manifest_version": 2,
+	"browser_action": {
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"icons": { "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" },
+	"content_scripts": [ {
+		"matches": ["http://t.exhaonline.com/*", "https://t.exhaonline.com/*"],
+		"js": ["jquery.js", "cookie.js"]
+	}]
+}
